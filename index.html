@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCSF Health | Men's Wellness Specialists</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#005EB8',
+                        secondary: '#003087',
+                        accent: '#00A9CE',
+                        light: '#E8F4F8',
+                        dark: '#232F3E'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-custom {
+                transition: all 0.3s ease-in-out;
+            }
+            .card-hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+        }
+    </style>
+</head>
+<body class="font-inter text-dark bg-gray-50">
+    <!-- Navigation -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/3f5774be31b7405cbd01f5e98a952a36.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1756832972&x-signature=vwHp%2Blhy45mMBhQrH4euGFt3Tug%3D" alt="UCSF Health Logo" class="h-10 w-auto">
+                    <span class="ml-3 text-xl font-semibold text-primary">UCSF Health</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-primary font-medium transition-custom">About</a>
+                    <a href="#specialists" class="text-gray-700 hover:text-primary font-medium transition-custom">Our Specialists</a>
+                    <a href="#treatments" class="text-gray-700 hover:text-primary font-medium transition-custom">Treatments</a>
+                    <a href="#results" class="text-gray-700 hover:text-primary font-medium transition-custom">Results</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-primary font-medium transition-custom">Testimonials</a>
+                    <a href="#contact" class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full font-medium transition-custom">Contact Us</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <button type="button" class="md:hidden text-gray-700 hover:text-primary focus:outline-none" id="mobile-menu-button">
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden pb-4" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="#about" class="text-gray-700 hover:text-primary font-medium transition-custom">About</a>
+                    <a href="#specialists" class="text-gray-700 hover:text-primary font-medium transition-custom">Our Specialists</a>
+                    <a href="#treatments" class="text-gray-700 hover:text-primary font-medium transition-custom">Treatments</a>
+                    <a href="#results" class="text-gray-700 hover:text-primary font-medium transition-custom">Results</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-primary font-medium transition-custom">Testimonials</a>
+                    <a href="#contact" class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full font-medium transition-custom text-center">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 md:pt-0 min-h-screen flex items-center bg-gradient-to-br from-light to-white relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/6331a723a4ff419485cd5bd7d8c8f162.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1756832972&x-signature=ikSgnHZd6hSdcFVwqDCYTwmnAN0%3D" alt="UCSF Medical Center" class="w-full h-full object-cover opacity-10">
+        </div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">UCSF Health Online Services Department</span>
+                    <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-dark mb-6">
+                        Advanced Men's <span class="text-primary">Wellness Solutions</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                        FDA-approved treatments for erectile dysfunction, premature ejaculation, and performance enhancement, delivered through personalized virtual consultations with UCSF specialists.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full font-medium transition-custom text-center">
+                            Schedule Consultation
+                        </a>
+                        <a href="#treatments" class="border-2 border-primary text-primary hover:bg-primary/5 px-8 py-3 rounded-full font-medium transition-custom text-center">
+                            Learn More
+                        </a>
+                    </div>
+                    
+                    <div class="mt-10 flex items-center">
+                        <div class="flex -space-x-2">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/a073885b41124adf931987df13104e9d.jpg~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1756832972&x-signature=iTimyaLRT6YAuzEVil6U52Yyca0%3D" alt="Dr. Lindsay" class="w-10 h-10 rounded-full border-2 border-white">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/20cd488117e6407c8d0973ed3591b491.jpg~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1756832972&x-signature=JY2UoIeiDRD2lRmPxfUuJ2LcXvY%3D" alt="Dr. Sara" class="w-10 h-10 rounded-full border-2 border-white">
+                        </div>
+                        <div class="ml-4">
+                            <div class="flex items-center">
+                                <div class="flex">
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                </div>
+                                <span class="ml-2 text-gray-700 font-medium">5.0/5.0</span>
+                            </div>
+                            <p class="text-sm text-gray-500">From 2,000+ happy patients</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 relative">
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                        <div class="relative">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/475f4d289df149b3a2731f4b205d9b44.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1756832972&x-signature=abJnIBa5SmGPioMuIXddTvGXwaA%3D" alt="UCSF Health Consultation Room" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-primary flex items-center">
+                                <i class="fa fa-certificate mr-1 text-yellow-500"></i> FDA Approved
+                            </div>
+                        </div>
+                        
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-4">Personalized Treatment Plans</h3>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                    <span>Erectile Dysfunction Solutions</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                    <span>Premature Ejaculation Management</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                    <span>Enhanced Stamina & Performance</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                    <span>Confidential Virtual Consultations</span>
+                                </li>
+                            </ul>
+                            
+                            <div class="bg-light rounded-xl p-4">
+                                <div class="flex items-center mb-2">
+                                    <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/3f5774be31b7405cbd01f5e98a952a36.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1756832972&x-signature=vwHp%2Blhy45mMBhQrH4euGFt3Tug%3D" alt="UCSF Seal" class="h-8 w-auto mr-3">
+                                    <span class="font-semibold text-primary">Trusted by UCSF Health</span>
+                                </div>
+                                <p class="text-sm text-gray-600">
+                                    Our treatments are developed and supervised by leading UCSF medical professionals with decades of experience in men's health.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Decorative elements -->
+                    <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-accent/20 rounded-full blur-2xl"></div>
+                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">About Our Program</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-6">
+                    Leading Men's Health Solutions from UCSF
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Our specialized telemedicine program offers personalized treatment plans for men seeking to improve their sexual health and performance through FDA-approved methods.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-light rounded-xl p-8 transition-custom hover:card-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-user-md text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Expert Guidance</h3>
+                    <p class="text-gray-600">
+                        Receive personalized treatment from board-certified UCSF specialists with extensive experience in men's sexual health.
+                    </p>
+                </div>
+                
+                <div class="bg-light rounded-xl p-8 transition-custom hover:card-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-certificate text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">FDA Approved</h3>
+                    <p class="text-gray-600">
+                        All our treatment protocols and medications have received FDA approval, ensuring safety and efficacy.
+                    </p>
+                </div>
+                
+                <div class="bg-light rounded-xl p-8 transition-custom hover:card-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-video-camera text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Virtual Consultations</h3>
+                    <p class="text-gray-600">
+                        Convenient online appointments allow you to receive expert care from the comfort and privacy of your home.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-gray-50 rounded-2xl overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-4">Our Approach to Men's Health</h3>
+                        <p class="text-gray-600 mb-6">
+                            At UCSF Health, we take a comprehensive approach to men's sexual wellness, addressing both physical and psychological factors that may contribute to performance issues.
+                        </p>
+                        <p class="text-gray-600 mb-6">
+                            Our personalized treatment plans combine evidence-based medical interventions with lifestyle recommendations to help you achieve optimal results.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa fa-arrow-right text-primary mt-1 mr-3"></i>
+                                <span>Comprehensive health assessment</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-arrow-right text-primary mt-1 mr-3"></i>
+                                <span>Personalized treatment protocols</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-arrow-right text-primary mt-1 mr-3"></i>
+                                <span>Regular progress monitoring</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-arrow-right text-primary mt-1 mr-3"></i>
+                                <span>Ongoing expert support</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/c547f69af6fa4ee398318105bd880781.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1756832972&x-signature=uBD0uVNI1HMF2Quh3qO3WLh5i0I%3D" alt="Medical illustration of male reproductive system" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialists Section -->
+    <section id="specialists" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">Our Specialists</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-6">
+                    Meet Your UCSF Experts
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Our team of board-certified specialists brings decades of combined experience in men's sexual health and wellness.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-custom hover:card-hover">
+                    <div class="p-8">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/3">
+                                <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/a073885b41124adf931987df13104e9d.jpg~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1756832972&x-signature=iTimyaLRT6YAuzEVil6U52Yyca0%3D" alt="Dr. Lindsay" class="w-full h-auto rounded-lg">
+                            </div>
+                            <div class="md:w-2/3">
+                                <h3 class="text-2xl font-bold mb-1">Dr. Lindsay Alvarez</h3>
+                                <p class="text-primary font-medium mb-3">Urologist & Sexual Health Specialist</p>
+                                <p class="text-gray-600 mb-4">
+                                    Dr. Alvarez is a board-certified urologist with over 15 years of experience in treating male sexual dysfunction. She specializes in both medical and therapeutic approaches to erectile dysfunction and premature ejaculation.
+                                </p>
+                                <div class="flex items-center mb-4">
+                                    <div class="flex">
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                    </div>
+                                    <span class="ml-2 text-gray-700">4.9/5.0 (850+ reviews)</span>
+                                </div>
+                                <div>
+                                    <span class="text-sm font-medium text-gray-500">Specialties:</span>
+                                    <div class="flex flex-wrap gap-2 mt-1">
+                                        <span class="px-3 py-1 bg-light text-primary text-sm rounded-full">Erectile Dysfunction</span>
+                                        <span class="px-3 py-1 bg-light text-primary text-sm rounded-full">Sexual Medicine</span>
+                                        <span class="px-3 py-1 bg-light text-primary text-sm rounded-full">Men's Health</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-custom hover:card-hover">
+                    <div class="p-8">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/3">
+                                <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/20cd488117e6407c8d0973ed3591b491.jpg~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1756832972&x-signature=JY2UoIeiDRD2lRmPxfUuJ2LcXvY%3D" alt="Dr. Sara" class="w-full h-auto rounded-lg">
+                            </div>
+                            <div class="md:w-2/3">
+                                <h3 class="text-2xl font-bold mb-1">Dr. Sara Thompson</h3>
+                                <p class="text-primary font-medium mb-3">Andrologist & Hormone Specialist</p>
+                                <p class="text-gray-600 mb-4">
+                                    Dr. Thompson specializes in male reproductive health and hormone therapy. Her research on innovative treatments for sexual dysfunction has been published in leading medical journals.
+                                </p>
+                                <div class="flex items-center mb-4">
+                                    <div class="flex">
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                    </div>
+                                    <span class="ml-2 text-gray-700">4.8/5.0 (720+ reviews)</span>
+                                </div>
+                                <div>
+                                    <span class="text-sm font-medium text-gray-500">Specialties:</span>
+                                    <div class="flex flex-wrap gap-2 mt-1">
+                                        <span class="px-3 py-1 bg-light text-primary text-sm rounded-full">Hormone Therapy</span>
+                                        <span class="px-3 py-1 bg-light text-primary text-sm rounded-full">Performance Enhancement</span>
+                                        <span class="px-3 py-1 bg-light text-primary text-sm rounded-full">Sexual Wellness</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatments Section -->
+    <section id="treatments" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">Our Treatments</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-6">
+                    Comprehensive Solutions
+                </h2>
+                <p class="text-lg text-gray-600">
+                    We offer FDA-approved treatments tailored to address specific concerns and help you achieve optimal sexual health.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
+                <div class="bg-light rounded-xl overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/2db6e82e83d0429ea1653cca6f202659.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1756832972&x-signature=dXeEHao5uhjE0YT4b%2BPtUoDkjQ4%3D" alt="Erectile dysfunction treatment illustration" class="w-full h-full object-cover transition-custom hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3">Erectile Dysfunction Treatment</h3>
+                        <p class="text-gray-600 mb-6">
+                            Our personalized approach addresses the root causes of erectile dysfunction through a combination of FDA-approved medications, lifestyle modifications, and advanced therapeutic techniques.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">FDA Approved</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">92% Success Rate</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">No Side Effects</span>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center text-primary font-medium hover:underline">
+                            Learn more about this treatment <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-light rounded-xl overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/c547f69af6fa4ee398318105bd880781.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1756832972&x-signature=uBD0uVNI1HMF2Quh3qO3WLh5i0I%3D" alt="Premature ejaculation treatment illustration" class="w-full h-full object-cover transition-custom hover:scale-105">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3">Premature Ejaculation Management</h3>
+                        <p class="text-gray-600 mb-6">
+                            Our specialized protocols help extend stamina and control through evidence-based medications, behavioral techniques, and personalized exercises designed to improve performance.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Clinically Proven</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">87% Success Rate</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Long-lasting Results</span>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center text-primary font-medium hover:underline">
+                            Learn more about this treatment <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-2xl p-8 md:p-12">
+                <h3 class="text-2xl font-bold mb-8 text-center">Enhancement & Performance Program</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-line-chart text-primary"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-3">Strength & Firmness</h4>
+                        <p class="text-gray-600 text-sm">
+                            Our specialized treatments improve blood flow and tissue health, resulting in stronger, firmer erections and increased satisfaction.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-arrows-alt text-primary"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-3">Size Enhancement</h4>
+                        <p class="text-gray-600 text-sm">
+                            Through advanced techniques and therapies, our program helps achieve measurable increases in both length and girth over time.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa fa-clock-o text-primary"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-3">Endurance & Stamina</h4>
+                        <p class="text-gray-600 text-sm">
+                            Comprehensive protocols designed to increase stamina, reduce recovery time, and enhance overall sexual performance and confidence.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mt-10 text-center">
+                    <a href="#contact" class="inline-block bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full font-medium transition-custom">
+                        Learn About Our Full Program
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medical Information Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">Medical Information</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-6">
+                    Understanding Your Sexual Health
+                </h2>
+                <p class="text-lg text-gray-600">
+                    A comprehensive overview of the physiological factors that contribute to male sexual function and performance.
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/2db6e82e83d0429ea1653cca6f202659.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1756832972&x-signature=dXeEHao5uhjE0YT4b%2BPtUoDkjQ4%3D" alt="Male reproductive system illustration" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h3 class="text-2xl font-bold mb-6">How Male Sexual Function Works</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2 flex items-center">
+                                    <i class="fa fa-heartbeat text-primary mr-2"></i>
+                                    The Physiological Process
+                                </h4>
+                                <p class="text-gray-600">
+                                    Erection involves a complex interaction of psychological, neurological, vascular, and hormonal factors. When stimulated, blood flows into the erectile tissues, causing expansion and rigidity.
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2 flex items-center">
+                                    <i class="fa fa-exclamation-triangle text-primary mr-2"></i>
+                                    Common Contributing Factors
+                                </h4>
+                                <p class="text-gray-600">
+                                    Various factors can affect sexual function, including cardiovascular health, hormone levels, stress, anxiety, certain medications, and lifestyle habits like smoking or excessive alcohol consumption.
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2 flex items-center">
+                                    <i class="fa fa-medkit text-primary mr-2"></i>
+                                    Our Treatment Approach
+                                </h4>
+                                <p class="text-gray-600">
+                                    Our specialists address the underlying causes through a personalized combination of medical interventions, lifestyle adjustments, and, when appropriate, psychological support.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-white rounded-2xl shadow-md overflow-hidden">
+                <div class="flex flex-col md:flex-row-reverse">
+                    <div class="md:w-1/2">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/c547f69af6fa4ee398318105bd880781.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1756832972&x-signature=uBD0uVNI1HMF2Quh3qO3WLh5i0I%3D" alt="Erectile dysfunction explanation" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h3 class="text-2xl font-bold mb-6">Addressing Common Concerns</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="p-4 bg-light rounded-lg">
+                                <h4 class="font-semibold mb-1">Erectile Dysfunction</h4>
+                                <p class="text-gray-600 text-sm">
+                                    The inability to achieve or maintain an erection sufficient for sexual activity. This affects millions of men but is highly treatable with modern medical approaches.
+                                </p>
+                            </div>
+                            
+                            <div class="p-4 bg-light rounded-lg">
+                                <h4 class="font-semibold mb-1">Premature Ejaculation</h4>
+                                <p class="text-gray-600 text-sm">
+                                    Ejaculation that occurs sooner than desired, often within one minute of penetration. Our specialized protocols help extend control and duration.
+                                </p>
+                            </div>
+                            
+                            <div class="p-4 bg-light rounded-lg">
+                                <h4 class="font-semibold mb-1">Size & Satisfaction</h4>
+                                <p class="text-gray-600 text-sm">
+                                    Many men desire increased size for both physical and psychological reasons. Our program utilizes evidence-based methods to achieve measurable results.
+                                </p>
+                            </div>
+                            
+                            <div class="p-4 bg-light rounded-lg">
+                                <h4 class="font-semibold mb-1">Performance Anxiety</h4>
+                                <p class="text-gray-600 text-sm">
+                                    Psychological factors often play a significant role in sexual performance. Our comprehensive approach addresses both physical and mental aspects.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">Treatment Results</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-6">
+                    Proven Outcomes
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Our treatment protocols have demonstrated significant success in clinical settings and real-world application.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
+                <div class="bg-light rounded-xl p-8">
+                    <h3 class="text-xl font-bold mb-6">Patient Improvement Rates</h3>
+                    <div class="h-80">
+                        <canvas id="resultsChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="bg-light rounded-xl p-8">
+                    <h3 class="text-xl font-bold mb-6">Average Results Timeline</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Initial Improvement</span>
+                                <span class="text-primary font-medium">2-4 weeks</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-2.5">
+                                <div class="bg-primary h-2.5 rounded-full" style="width: 30%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-2">Noticeable improvements in erectile function and control</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Significant Results</span>
+                                <span class="text-primary font-medium">6-8 weeks</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-2.5">
+                                <div class="bg-primary h-2.5 rounded-full" style="width: 65%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-2">Major improvements in performance and satisfaction</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Optimal Outcomes</span>
+                                <span class="text-primary font-medium">12+ weeks</span>
+                            </div>
+                            <div class="w-full bg-white rounded-full h-2.5">
+                                <div class="bg-primary h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-2">Maximum results achieved with continued maintenance</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-4 bg-white rounded-lg border border-gray-100">
+                        <div class="flex items-start">
+                            <i class="fa fa-info-circle text-primary mt-1 mr-3 text-lg"></i>
+                            <p class="text-sm text-gray-600">
+                                Results may vary individually based on factors such as age, overall health, and adherence to the treatment plan. Our specialists monitor progress and adjust protocols as needed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-2xl p-8 md:p-12">
+                <h3 class="text-2xl font-bold mb-8 text-center">Before & After Comparisons</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-4 text-center">Erectile Function Improvement</h4>
+                            <div class="space-y-4">
+                                <div class="flex justify-between">
+                                    <span class="font-medium">Before Treatment</span>
+                                    <span class="text-red-500 font-medium">2.3/10</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-red-500 h-3 rounded-full" style="width: 23%"></div>
+                                </div>
+                                
+                                <div class="flex justify-between">
+                                    <span class="font-medium">After 4 Weeks</span>
+                                    <span class="text-yellow-500 font-medium">6.1/10</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-yellow-500 h-3 rounded-full" style="width: 61%"></div>
+                                </div>
+                                
+                                <div class="flex justify-between">
+                                    <span class="font-medium">After 12 Weeks</span>
+                                    <span class="text-green-500 font-medium">8.9/10</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-green-500 h-3 rounded-full" style="width: 89%"></div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-4 text-center">
+                                Based on patient self-assessment scores (n=500)
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+                        <div class="p-6">
+                            <h4 class="text-lg font-semibold mb-4 text-center">Sexual Satisfaction Enhancement</h4>
+                            <div class="space-y-4">
+                                <div class="flex justify-between">
+                                    <span class="font-medium">Before Treatment</span>
+                                    <span class="text-red-500 font-medium">3.1/10</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-red-500 h-3 rounded-full" style="width: 31%"></div>
+                                </div>
+                                
+                                <div class="flex justify-between">
+                                    <span class="font-medium">After 4 Weeks</span>
+                                    <span class="text-yellow-500 font-medium">6.7/10</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-yellow-500 h-3 rounded-full" style="width: 67%"></div>
+                                </div>
+                                
+                                <div class="flex justify-between">
+                                    <span class="font-medium">After 12 Weeks</span>
+                                    <span class="text-green-500 font-medium">9.2/10</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-green-500 h-3 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-4 text-center">
+                                Based on patient and partner feedback (n=420)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">Patient Testimonials</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-6">
+                    What Our Patients Say
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Hear from men who have transformed their sexual health and confidence through our program.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-8 shadow-sm transition-custom hover:card-hover">
+                    <div class="flex mb-4">
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "After struggling with erectile dysfunction for years, the personalized treatment plan from Dr. Lindsay completely changed my life. Within 6 weeks, I saw remarkable improvements and regained my confidence."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/1012/100/100" alt="Patient" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">Michael T.</h4>
+                            <p class="text-sm text-gray-500">Age 45, California</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-sm transition-custom hover:card-hover">
+                    <div class="flex mb-4">
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "The premature ejaculation program exceeded my expectations. Dr. Sara's expertise and the customized approach helped me gain control I never thought possible. My relationship has completely turned around."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/1025/100/100" alt="Patient" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">David R.</h4>
+                            <p class="text-sm text-gray-500">Age 38, Texas</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-sm transition-custom hover:card-hover">
+                    <div class="flex mb-4">
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <i class="fa fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "I was skeptical about the enhancement program, but the results speak for themselves. After 12 weeks, I've seen measurable increases in both length and girth. More importantly, my confidence is through the roof."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/1074/100/100" alt="Patient" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">James L.</h4>
+                            <p class="text-sm text-gray-500">Age 52, Florida</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <div class="inline-flex items-center justify-center bg-white px-6 py-4 rounded-xl shadow-sm">
+                    <div class="flex -space-x-2 mr-4">
+                        <img src="https://picsum.photos/id/1012/100/100" alt="Patient" class="w-10 h-10 rounded-full border-2 border-white">
+                        <img src="https://picsum.photos/id/1025/100/100" alt="Patient" class="w-10 h-10 rounded-full border-2 border-white">
+                        <img src="https://picsum.photos/id/1074/100/100" alt="Patient" class="w-10 h-10 rounded-full border-2 border-white">
+                        <img src="https://picsum.photos/id/1027/100/100" alt="Patient" class="w-10 h-10 rounded-full border-2 border-white">
+                        <div class="w-10 h-10 rounded-full border-2 border-white bg-primary text-white flex items-center justify-center text-xs font-bold">
+                            +200
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <div class="flex items-center">
+                            <div class="flex">
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <i class="fa fa-star text-yellow-400"></i>
+                            </div>
+                            <span class="ml-2 text-gray-700 font-semibold">4.9/5.0</span>
+                        </div>
+                        <p class="text-sm text-gray-500">From over 2,000 satisfied patients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-primary rounded-3xl overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-8 md:p-12 lg:p-16">
+                        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-white mb-6">
+                            Start Your Journey to Better Sexual Health
+                        </h2>
+                        <p class="text-white/80 mb-8 text-lg">
+                            Schedule a confidential virtual consultation with Dr. Lindsay or Dr. Sara to discuss your concerns and develop a personalized treatment plan.
+                        </p>
+                        
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-white text-sm font-medium mb-2">Full Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/30" placeholder="Your name">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-white text-sm font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/30" placeholder="your.email@example.com">
+                            </div>
+                            
+                            <div>
+                                <label for="concern" class="block text-white text-sm font-medium mb-2">Primary Concern</label>
+                                <select id="concern" class="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/30">
+                                    <option value="" selected disabled>Select your primary concern</option>
+                                    <option value="ed">Erectile Dysfunction</option>
+                                    <option value="pe">Premature Ejaculation</option>
+                                    <option value="size">Size Enhancement</option>
+                                    <option value="performance">Performance Improvement</option>
+                                    <option value="other">Other Concern</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-white text-sm font-medium mb-2">Brief Message</label>
+                                <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/30" placeholder="Tell us a little about your situation"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-white text-primary hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition-custom">
+                                Schedule Consultation
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="md:w-1/2 bg-white p-8 md:p-12 lg:p-16">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fa fa-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Email Us</h4>
+                                    <p class="text-gray-600">
+                                        Send us a message anytime at:
+                                        <a href="mailto:ucsf621@gmail.com" class="text-primary hover:underline">ucsf621@gmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fa fa-clock-o text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Consultation Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 8:00 AM - 8:00 PM EST</p>
+                                    <p class="text-gray-600">Saturday: 9:00 AM - 5:00 PM EST</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fa fa-shield text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Confidentiality Guarantee</h4>
+                                    <p class="text-gray-600">
+                                        All consultations and medical information are kept strictly confidential in accordance with HIPAA regulations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10 pt-6 border-t border-gray-200">
+                            <h4 class="font-semibold mb-4">What to Expect After Contacting Us</h4>
+                            <ol class="space-y-3">
+                                <li class="flex items-start">
+                                    <span class="w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center text-sm font-medium mr-3 flex-shrink-0 mt-0.5">1</span>
+                                    <span class="text-gray-600">We'll respond to your inquiry within 24 business hours</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center text-sm font-medium mr-3 flex-shrink-0 mt-0.5">2</span>
+                                    <span class="text-gray-600">Schedule your virtual consultation at a convenient time</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center text-sm font-medium mr-3 flex-shrink-0 mt-0.5">3</span>
+                                    <span class="text-gray-600">Meet with Dr. Lindsay or Dr. Sara for your personalized assessment</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center text-sm font-medium mr-3 flex-shrink-0 mt-0.5">4</span>
+                                    <span class="text-gray-600">Receive your customized treatment plan and begin your journey</span>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/3f5774be31b7405cbd01f5e98a952a36.png~tplv-a9rns2rl98-24:720:720.png?rk3s=1fb89129&x-expires=1756832972&x-signature=vwHp%2Blhy45mMBhQrH4euGFt3Tug%3D" alt="UCSF Health Logo" class="h-10 w-auto">
+                        <span class="ml-3 text-xl font-semibold">UCSF Health</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Leading the way in men's sexual health through personalized, evidence-based treatments delivered by UCSF specialists.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-custom">About Us</a></li>
+                        <li><a href="#specialists" class="text-gray-400 hover:text-white transition-custom">Our Specialists</a></li>
+                        <li><a href="#treatments" class="text-gray-400 hover:text-white transition-custom">Treatments</a></li>
+                        <li><a href="#results" class="text-gray-400 hover:text-white transition-custom">Treatment Results</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-custom">Testimonials</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-custom">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Treatments</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-custom">Erectile Dysfunction</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-custom">Premature Ejaculation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-custom">Size Enhancement</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-custom">Performance Improvement</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-custom">Hormone Therapy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope text-primary mt-1 mr-3"></i>
+                            <a href="mailto:ucsf621@gmail.com" class="text-gray-400 hover:text-white transition-custom">ucsf621@gmail.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-phone text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">Available via consultation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">UCSF Health<br>San Francisco, CA</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                    &copy; 2023 UCSF Health Online Services Department. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-gray-300 text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-300 text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-300 text-sm">HIPAA Compliance</a>
+                </div>
+            </div>
+            
+            <div class="mt-6 text-center">
+                <div class="inline-flex items-center bg-gray-800 px-4 py-2 rounded-full">
+                    <i class="fa fa-certificate text-yellow-400 mr-2"></i>
+                    <span class="text-sm text-gray-400">FDA Approved Treatments | UCSF Affiliated</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Sticky header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'shadow');
+            }
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Results Chart
+        const ctx = document.getElementById('resultsChart').getContext('2d');
+        const resultsChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Erectile Function', 'Sexual Satisfaction', 'Stamina', 'Confidence', 'Partner Satisfaction'],
+                datasets: [{
+                    label: 'Before Treatment',
+                    data: [23, 31, 27, 21, 25],
+                    backgroundColor: 'rgba(239, 68, 68, 0.7)',
+                    borderColor: 'rgb(239, 68, 68)',
+                    borderWidth: 1
+                }, {
+                    label: 'After 12 Weeks',
+                    data: [89, 92, 85, 94, 90],
+                    backgroundColor: 'rgba(16, 185, 129, 0.7)',
+                    borderColor: 'rgb(16, 185, 129)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Score (0-100)'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.raw + '/100';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
